@@ -1,23 +1,17 @@
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
+import Navbar from './components/Navbar';
+import ProductList from './components/ProductList';
+import Hero from './components/Hero';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="App" style={{ overflow: 'hidden' }}>
+      <Navbar />
+      <Hero />
+      <div className="container-fluid" style={{ maxWidth: '1400px', padding: '4rem 1rem' }}>
+        <ProductList />
+      </div>
     </div>
   );
 }
