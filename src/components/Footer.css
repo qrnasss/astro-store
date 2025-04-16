@@ -1,0 +1,113 @@
+.footer {
+  background-color: #800020;
+  color: white;
+  padding: 4rem 2rem 1rem;
+  direction: rtl;
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3rem;
+}
+
+.footer-section h3 {
+  color: #fff;
+  font-size: 1.4rem;
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+}
+
+.social-links {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.social-link {
+  color: white;
+  text-decoration: none;
+  width: 40px;
+  height: 40px;
+  border: 2px solid #800020;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  font-size: 1.2rem;
+  background-color: transparent;
+}
+
+.social-link::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.1);
+  transform: rotate(45deg) scale(0);
+  transition: transform 0.4s ease;
+}
+
+.social-link:hover {
+  color: #800020;
+  background-color: white;
+  transform: scale(1.1);
+}
+
+.social-link:hover::before {
+  transform: rotate(45deg) scale(2.5);
+}
+
+.quick-links, .contact-info {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.quick-links li, .contact-info li {
+  margin-bottom: 1rem;
+}
+
+.quick-links a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.quick-links a:hover {
+  color: #800020;
+}
+
+.contact-info li {
+  color: #ccc;
+}
+
+.footer-bottom {
+  margin-top: 3rem;
+  padding-top: 2rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  text-align: center;
+}
+
+.footer-bottom p {
+  color: #888;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+  .footer-content {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    text-align: center;
+  }
+
+  .social-links {
+    justify-content: center;
+  }
+
+  .footer {
+    padding: 3rem 1rem 1rem;
+  }
+} 
